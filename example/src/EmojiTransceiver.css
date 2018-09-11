@@ -1,0 +1,125 @@
+.container {
+  width: 500px;
+  max-width: 100%;
+  display: flex;
+  flex-flow: column;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 0;
+  background-color: #383838;
+  border: 1px solid #333;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.chatHeader {
+  padding-top: 3px;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+.info {
+  color: #888;
+  font-size: 16px;
+}
+
+.circleButton {
+  border-radius: 24px;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  left: 8px;
+  top: -2px;
+  font-size: 12px;
+  line-height: 0;
+  text-align: center;
+  padding: 0;
+  color: rgba(0,0,0,0);
+  background-color: rgb(243, 90, 84);
+  border: none;
+  transition: 0.1s ease-in;
+  outline: none;
+}
+
+.x {
+  line-height: 0;
+  padding: 0;
+  margin: -1px 0 0 0;
+}
+
+.circleButton:hover {
+  color: #333;
+}
+
+.circleButton:active {
+  background-color: #bc382d;
+}
+
+hr {
+  height: 1px;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.emojiBar {
+  align-self: flex-end;
+  z-index: 2;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #383838;
+  padding: 10px 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 -5px 2px -2px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  color: #adadad;
+  font-weight: 100;
+}
+
+.chatBox {
+  overflow-x: hidden;
+  height: 200px;
+  max-height: 70%;
+  font-size: 20px;
+  padding: 10px 10px 20px 30px;
+  overflow-y: scroll;
+  background-color: #595959;
+}
+
+.chat {
+  margin-top: 10px;
+}
+
+.chat :first{
+  margin-top: -30px;
+}
+
+.name {
+  margin-right: 20px;
+}
+
+.emojiButton {
+  margin: 0 auto;
+  font-size: 36px;
+  padding: 10px 11px 7px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.emojiButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.emojiButton:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}

@@ -3,12 +3,15 @@ import commonjs from 'rollup-plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
+import builtins from 'rollup-plugin-node-builtins';
+import globals from 'rollup-plugin-node-globals';
 import url from 'rollup-plugin-url'
 
 import pkg from './package.json'
 
 export default {
   input: 'src/index.js',
+  external: ['liowebrtc'],
   output: [
     {
       file: pkg.main,
@@ -23,15 +26,17 @@ export default {
   ],
   plugins: [
     external(),
+    builtins(),
     postcss({
       modules: true
     }),
     url(),
     babel({
-      exclude: 'node_modules/**',
-      plugins: [ 'external-helpers' ]
+      exclude: 'node_modules/**'
     }),
-    resolve(),
+    resolve({
+      preferBuiltins: false
+    }),
     commonjs()
   ]
 }

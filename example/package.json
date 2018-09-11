@@ -1,6 +1,6 @@
 {
   "name": "react-liowebrtc-example",
-  "homepage": "https://lazorfuzz.github.io/react-liowebrtc",
+  "homepage": "https://react-liowebrtc.netlify.com",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -8,8 +8,10 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-emoji-render": "^0.4.5",
+    "react-liowebrtc": "link:..",
     "react-scripts": "^1.1.4",
-    "react-liowebrtc": "link:.."
+    "react-syntax-highlighter": "^8.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

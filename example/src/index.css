@@ -6,11 +6,13 @@ html, body {
 
 .main {
   padding: 10px;
+  padding-bottom: 60px;
 }
 
 .infoBox {
-  width: 500px;
+  width: 600px;
   max-width: 100%;
+  text-align: center;
 }
 
 .install {
@@ -30,8 +32,10 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .bodyText {
   font-size: 18px;
+  line-height: 25px;
 }

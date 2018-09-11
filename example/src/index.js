@@ -46,9 +46,14 @@ class App extends React.Component {
         <div className="header">
           <div className="infoBox">
             <h1>React LioWebRTC</h1>
-            <p className="bodyText">A (work in progress) component library that enables real-time, bidirectional peer to peer communication via WebRTC. Compatible with Electron.</p>
+            <p className="bodyText">A (work in progress) component library that enables real-time, bidirectional peer to peer communication via WebRTC, and is compatible with Electron. <a href="https://github.com/lazorfuzz/react-liowebrtc">Click here</a> to view react-liowebrtc on GitHub.</p>
           </div>
         </div>
+        <div className="installBox">
+          <h1>Installation</h1>
+          <code className="install">npm i react-liowebrtc</code>
+        </div>
+        <h1 style={{ textAlign: 'center' }}>Demo</h1>
         <LioWebRTC
           options={this.state.options}
           onReady={(webrtc) => webrtc.joinRoom('react-liowebrtc-test-demo')}
@@ -57,10 +62,6 @@ class App extends React.Component {
         >
           <EmojiTransceiver chatLog={this.state.chatLog} onSend={(emoji) => emoji && this.addChat('Me', emoji)} />
         </LioWebRTC>
-        <div className="installBox">
-          <h1>Installation</h1>
-          <code className="install">npm i react-liowebrtc</code>
-        </div>
       </div>
     );
   }

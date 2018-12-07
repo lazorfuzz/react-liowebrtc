@@ -8,14 +8,7 @@ class EmojiTransceiver extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      containerClass: 'container',
-      emojis: {
-        heart: '❤️',
-        laughing: '😂',
-        barf: '🤮',
-        tongue: '😛',
-        poop: '💩'
-      }
+      containerClass: 'container'
     };
   }
 
@@ -25,7 +18,7 @@ class EmojiTransceiver extends React.Component {
     }
     return this.props.chatLog.map((item) => (
       <div className="chat" key={`chat-${item.name}-${item.timestamp}`}>
-        <b className="name" style={{ color: item.alert ? '#888' : '#333' }}>{item.name}</b> {!item.alert && <Twemoji style={{ fontSize: '64px' }} text={this.state.emojis[item.message]} />}
+        <b className="name" style={{ color: item.alert ? '#888' : '#333' }}>{item.name}</b> {!item.alert && <Twemoji style={{ fontSize: '64px' }} text={this.props.emojis[item.message].symbol} />}
       </div>
     ));
   }
@@ -42,9 +35,9 @@ class EmojiTransceiver extends React.Component {
   }
 
   render() {
-    const { emojis } = this.state;
+    const { emojis } = this.props;
     return (
-      <div className={this.state.containerClass} ref={(div) => this.container = div}>
+      <div className={this.state.containerClass}>
         <div className="chatHeader">
           <button className="circleButton" onClick={this.handleShut}><p className="x">x</p></button>
           <h1 className="title">P2P Emoji Communicator</h1>
@@ -54,16 +47,16 @@ class EmojiTransceiver extends React.Component {
           {this.props.chatLog.length ? this.generateChats() : (
             <div className="info">
               <p>To test this component out, open this page in a new tab or send it to a friend.</p>
-          </div>
+            </div>
           )}
         </div>
         <hr />
         <div className="emojiBar">
-          <div className="emojiButton" onClick={() => this.handleSend('heart')}><Twemoji text={emojis.heart} /></div>
-          <div className="emojiButton" onClick={() => this.handleSend('laughing')}><Twemoji text={emojis.laughing} /></div>
-          <div className="emojiButton" onClick={() => this.handleSend('barf')}><Twemoji text={emojis.barf} /></div>
-          <div className="emojiButton" onClick={() => this.handleSend('tongue')}><Twemoji text={emojis.tongue} /></div>
-          <div className="emojiButton" onClick={() => this.handleSend('poop')}><Twemoji text={emojis.poop} /></div>
+          <div className="emojiButton" onClick={() => this.handleSend('heart')}><Twemoji text={emojis.heart.symbol} /></div>
+          <div className="emojiButton" onClick={() => this.handleSend('laughing')}><Twemoji text={emojis.laughing.symbol} /></div>
+          <div className="emojiButton" onClick={() => this.handleSend('barf')}><Twemoji text={emojis.barf.symbol} /></div>
+          <div className="emojiButton" onClick={() => this.handleSend('tongue')}><Twemoji text={emojis.tongue.symbol} /></div>
+          <div className="emojiButton" onClick={() => this.handleSend('poop')}><Twemoji text={emojis.poop.symbol} /></div>
         </div>
       </div>
     );

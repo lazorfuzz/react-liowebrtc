@@ -15,7 +15,9 @@ class LioWebRTC extends React.Component {
       onReceivedPeerData,
       onConnectionReady,
       onCreatedPeer,
+      onPeerStreamAdded,
       onPeerStreamRemoved,
+      onRemovedPeer,
       onIceConnectionStateChange,
       onSignalingStateChange,
       onLeftRoom,
@@ -23,15 +25,13 @@ class LioWebRTC extends React.Component {
       onPeerMute,
       onReceivedSignalData,
       onPeerUnmute,
-      onVideoAdded,
-      onVideoRemoved,
       onConnectionError
     } = this.props;
 
     onReceivedPeerData && this.webrtc.on('receivedPeerData', function(...args) {
       onReceivedPeerData(this, ...args);
     });
-    onReady && this.webrtc.on('readyToCall', function(...args) {
+    onReady && this.webrtc.on('ready', function(...args) {
       onReady(this, ...args);
     });
     onConnectionReady && this.webrtc.on('connectionReady', function(...args) {
@@ -64,11 +64,11 @@ class LioWebRTC extends React.Component {
     onReceivedSignalData && this.webrtc.on('receivedSignalData', function(...args) {
       onReceivedSignalData(this, ...args);
     });
-    onVideoAdded && this.webrtc.on('videoAdded', function(...args) {
-      onVideoAdded(this, ...args);
+    onPeerStreamAdded && this.webrtc.on('peerStreamAdded', function(...args) {
+      onPeerStreamAdded(this, ...args);
     });
-    onVideoRemoved && this.webrtc.on('videoRemoved', function(...args) {
-      onVideoRemoved(this, ...args);
+    onRemovedPeer && this.webrtc.on('removedPeer', function(...args) {
+      onRemovedPeer(this, ...args);
     });
     onConnectionError && this.webrtc.on('connectivityError', function(...args) {
       onConnectionError(this, ...args);
@@ -80,12 +80,17 @@ class LioWebRTC extends React.Component {
   }
 
   disconnect = () => {
-    this.webrtc.stopLocalVideo();
-    this.webrtc.leaveRoom();
-    this.webrtc.disconnect();
+    try {
+      this.webrtc.stopLocalVideo();
+      this.webrtc.leaveRoom();
+      this.webrtc.disconnect();
+    } catch (e) {
+      // console.log(e);
+    }
   }
 
   render() {
+    console.log('CHILDREN', this.props.children);
     return (
       <div>
         {
@@ -110,8 +115,8 @@ LioWebRTC.propTypes = {
   onPeerMute: PropTypes.func,
   onReceivedSignalData: PropTypes.func,
   onPeerUnmute: PropTypes.func,
-  onVideoAdded: PropTypes.func,
-  onVideoRemoved: PropTypes.func,
+  onPeerStreamAdded: PropTypes.func,
+  onRemovedPeer: PropTypes.func,
   onConnectionError: PropTypes.func
 };
 

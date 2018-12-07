@@ -32,7 +32,16 @@ export default {
     }),
     url(),
     babel({
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
+      plugins: ['external-helpers'],
+      babelrc: false,
+      presets: [
+        ['env', {
+          modules: false
+        }],
+        'stage-0',
+        'react'
+      ]
     }),
     resolve({
       preferBuiltins: false

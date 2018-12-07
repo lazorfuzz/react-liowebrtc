@@ -22,6 +22,34 @@ html, body {
   padding: 15px;
 }
 
+.link {
+  margin: 0 auto;
+  cursor: pointer;
+  color: #3647c4;
+  transition: color 0.2s ease-in;
+}
+
+.link:hover {
+  color: #6272e5;
+}
+
+.link:active {
+  color: #8291ff;
+}
+
+.viewSource {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.source {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+
 .header {
   display: flex;
   flex-flow: row;

@@ -82,6 +82,7 @@ LioWebRTC.propTypes = {
   onReceivedPeerData: PropTypes.func,
   onConnectionReady: PropTypes.func,
   onCreatedPeer: PropTypes.func,
+  onPeerStreamAdded: PropTypes.func,
   onPeerStreamRemoved: PropTypes.func,
   onIceConnectionStateChange: PropTypes.func,
   onSignalingStateChange: PropTypes.func,
@@ -89,8 +90,7 @@ LioWebRTC.propTypes = {
   onPeerMute: PropTypes.func,
   onReceivedSignalData: PropTypes.func,
   onPeerUnmute: PropTypes.func,
-  onVideoAdded: PropTypes.func,
-  onVideoRemoved: PropTypes.func,
+  onRemovedPeer: PropTypes.func,
   onConnectionError: PropTypes.func
 };
 ```

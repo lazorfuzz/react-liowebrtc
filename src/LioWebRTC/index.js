@@ -90,7 +90,6 @@ class LioWebRTC extends React.Component {
   }
 
   render() {
-    console.log('CHILDREN', this.props.children);
     return (
       <div>
         {

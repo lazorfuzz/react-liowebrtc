@@ -73,7 +73,7 @@ class MyComponent extends Component {
 export default withWebRTC(MyComponent);
 ```
 
-### Video Chat
+### Video Chat Example
 ```jsx
 import React, { Component } from 'react';
 import { LioWebRTC, LocalVideo, RemoteVideo } from 'react-liowebrtc'
@@ -116,7 +116,7 @@ class ExampleVideoChat extends Component {
         options={{ debug: true }}
         onReady={this.join}
         onCreatedPeer={this.handleCreatedPeer}
-        onRemovedPeer={this.handlePeerLeft}
+        onRemovedPeer={this.handleRemovedPeer}
       >
         <LocalVideo videoProps={{ style: { width: 200, borderRadius: '5px' } }} />
         {
@@ -127,6 +127,8 @@ class ExampleVideoChat extends Component {
     )
   }
 }
+
+export default ExampleVideoChat;
 ```
 
 ## Props

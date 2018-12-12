@@ -20,6 +20,7 @@
 
     // allow specifying true explicitly for boolean props
     "react/jsx-boolean-value": 0,
+    "react/forbid-prop-types": 0,
     "semi": 0
   }
 }

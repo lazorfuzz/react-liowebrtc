@@ -73,6 +73,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      peers: [],
       chatLog: [],
       options: {
         debug: true,
@@ -95,6 +96,7 @@ class App extends React.Component {
 
   handleCreatedPeer = (webrtc, peer) => {
     this.addChat(`Peer-${peer.id.substring(0, 5)} joined the room!`, ' ', true);
+    this.setState({ peers: [...this.state.peers, peer] });
   }
 
   handlePeerData = (webrtc, type, payload, peer) => {
@@ -119,6 +121,10 @@ class App extends React.Component {
     if (!alert) new Audio(this.state.emojis[message].sound).play();
   }
 
+  handleRemovedPeer = (webrtc, peer) => {
+    this.setState({ peers: this.state.peers.filter(p => !p.closed) });
+  }
+
   render() {
     return (
       <div className="main">
@@ -139,6 +145,7 @@ class App extends React.Component {
             options={this.state.options}
             onReady={this.join}
             onCreatedPeer={this.handleCreatedPeer}
+            onRemovedPeer={this.handleRemovedPeer}
             onReceivedPeerData={this.handlePeerData}
           >
             <EmojiTransceiver

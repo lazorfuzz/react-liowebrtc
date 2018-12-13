@@ -88,9 +88,7 @@ class ExampleVideoChat extends Component {
     }
   }
 
-  join = (webrtc) => {
-    webrtc.joinRoom('react-liowebrtc-video-chat-room-arbitrary-name');
-  }
+  join = (webrtc) => webrtc.joinRoom('video-chat-room-arbitrary-name');
 
   handleCreatedPeer = (webrtc, peer) => {
     this.setState({ peers: [...this.state.peers, peer] });
@@ -103,10 +101,7 @@ class ExampleVideoChat extends Component {
   generateRemotes = () => this.state.peers.map((peer) => {
     return (
       <RemoteVideo
-        key={`remote-video-${peer.id}`}
-        peer={peer}
-        videoProps={{ style: { width: 200, borderRadius: '5px', marginLeft: '10px' } }}
-      />
+        key={`remote-video-${peer.id}`} peer={peer} />
     );
   });
 
@@ -118,7 +113,7 @@ class ExampleVideoChat extends Component {
         onCreatedPeer={this.handleCreatedPeer}
         onRemovedPeer={this.handleRemovedPeer}
       >
-        <LocalVideo videoProps={{ style: { width: 200, borderRadius: '5px' } }} />
+        <LocalVideo />
         {
           this.state.peers &&
           this.generateRemotes()
@@ -131,8 +126,9 @@ class ExampleVideoChat extends Component {
 export default ExampleVideoChat;
 ```
 
-## Props
+## Component Props
 
+### LioWebRTC Component
 ```jsx
 LioWebRTC.propTypes = {
   options: PropTypes.object, // Initializing options passed into the liowebrtc library
@@ -153,16 +149,19 @@ LioWebRTC.propTypes = {
   onConnectionError: PropTypes.func // When an error occurs in connecting to a peer
 };
 ```
+All event emitters pass a webrtc session manager object to the listener functions. For example, the  `onReceivedPeerData` event passes the following objects: `(webrtc, type, data, peer)`. The `onCreatedPeer` event passes `(webrtc, peer)`. Take a look at the [LioWebRTC docs](https://github.com/lazorfuzz/liowebrtc) for more information on LioWebRTC's events and methods.  All events emitted by LioWebRTC will have a preceding webrtc object when using react-liowebrtc.
 
+### LocalVideo Component
 ```jsx
 LocalVideo.propTypes = {
-  videoProps: PropTypes.object, // props for the inner video element
+  videoProps: PropTypes.object, // props passed to the inner video element
 };
 ```
 
+### RemoteVideo Component
 ```jsx
 RemoteVideo.propTypes = {
-  videoProps: PropTypes.object, // props for the inner video element
+  videoProps: PropTypes.object, // props passed to the inner video element
   peer: PropTypes.instanceOf(Peer) // the Peer instance
 };
 ```

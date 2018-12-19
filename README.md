@@ -85,7 +85,7 @@ class ExampleVideoChat extends Component {
     super(props);
     this.state = {
       peers: []
-    }
+    };
   }
 
   join = (webrtc) => webrtc.joinRoom('video-chat-room-arbitrary-name');
@@ -98,10 +98,8 @@ class ExampleVideoChat extends Component {
     this.setState({ peers: this.state.peers.filter(p => !p.closed) });
   }
 
-  generateRemotes = () => this.state.peers.map((peer) => {
-    return (
-      <RemoteVideo
-        key={`remote-video-${peer.id}`} peer={peer} />
+  generateRemotes = () => this.state.peers.map((peer) => (
+      <RemoteVideo key={`remote-video-${peer.id}`} peer={peer} />
     );
   });
 
@@ -167,6 +165,8 @@ RemoteVideo.propTypes = {
 ```
 
 These props are needed to initialize and set event listeners for the liowebrtc library. Take a look at the [liowebrtc](https://github.com/lazorfuzz/liowebrtc) docs for more info.
+
+You can also take a look at this [tutorial](https://medium.com/@leontosy/building-a-p2p-web-app-with-react-and-liowebrtc-6a7e8c621085) showing how to build a chat room with react-liowebrtc.
 
 ## License
 

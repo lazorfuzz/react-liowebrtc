@@ -68,6 +68,6 @@
     "dist"
   ],
   "dependencies": {
-    "liowebrtc": "^0.2.4"
+    "liowebrtc": "^0.2.8"
   }
 }

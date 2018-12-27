@@ -3471,10 +3471,6 @@ eslint-plugin-import@^2.13.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-jest@^21.24.1:
-  version "21.27.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.27.2.tgz#2a795b7c3b5e707df48a953d651042bd01d7b0a8"
-
 eslint-plugin-jsx-a11y@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-5.1.1.tgz#5c96bb5186ca14e94db1095ff59b3e2bd94069b1"
@@ -5818,11 +5814,10 @@ levn@^0.3.0, levn@~0.3.0:
     type-check "~0.3.2"
 
 liowebrtc@^0.2.4:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/liowebrtc/-/liowebrtc-0.2.6.tgz#2f5fe10ea2c640450811cd7af29cda33df9091bf"
+  version "0.2.8"
+  resolved "https://registry.yarnpkg.com/liowebrtc/-/liowebrtc-0.2.8.tgz#3dc4f511398e9e288449353d7c5920e7f0ad6c25"
   dependencies:
     attachmediastream "^2.0.4"
-    eslint-plugin-jest "^21.24.1"
     filetransfer "^2.0.4"
     hark "^1.2.0"
     mockconsole "0.0.1"

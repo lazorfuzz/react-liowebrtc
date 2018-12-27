@@ -1,6 +1,6 @@
 {
   "name": "react-liowebrtc",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A React component library that makes it easy to add p2p communication into components via LioWebRTC.",
   "author": "lazorfuzz",
   "license": "MIT",

@@ -10,7 +10,7 @@ class LocalAudio extends React.Component {
 
   render() {
     return (
-      <vaudio
+      <audio
         {...this.props.videoProps}
         id='localAudio'
         ref={(vid) => { this.localAudio = vid; }}

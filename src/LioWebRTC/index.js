@@ -13,6 +13,7 @@ class LioWebRTC extends React.Component {
     const {
       onReady,
       onReceivedPeerData,
+      onChannelOpen,
       onConnectionReady,
       onCreatedPeer,
       onPeerStreamAdded,
@@ -33,6 +34,9 @@ class LioWebRTC extends React.Component {
     });
     onReady && this.webrtc.on('ready', function(...args) {
       onReady(this, ...args);
+    });
+    onChannelOpen && this.webrtc.on('channelOpen', function(...args) {
+      onChannelOpen(this, ...args);
     });
     onConnectionReady && this.webrtc.on('connectionReady', function(...args) {
       onConnectionReady(this, ...args);
@@ -104,6 +108,7 @@ LioWebRTC.propTypes = {
   options: PropTypes.object,
   onReady: PropTypes.func,
   onJoinedRoom: PropTypes.func,
+  onChannelOpen: PropTypes.func,
   onReceivedPeerData: PropTypes.func,
   onConnectionReady: PropTypes.func,
   onCreatedPeer: PropTypes.func,

@@ -2073,7 +2073,7 @@ buffer@^4.3.0:
 
 bufferutil@1.2.x:
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/bufferutil/-/bufferutil-1.2.1.tgz#37be5d36e1e06492221e68d474b1ac58e510cbd7"
+  resolved "http://registry.npmjs.org/bufferutil/-/bufferutil-1.2.1.tgz#37be5d36e1e06492221e68d474b1ac58e510cbd7"
   dependencies:
     bindings "1.2.x"
     nan "^2.0.5"
@@ -4266,10 +4266,6 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-getscreenmedia@^5.0.0:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/getscreenmedia/-/getscreenmedia-5.0.2.tgz#4b49667fcf5ed4171ea916c87da1ee23c3c045e2"
-
 gh-pages@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/gh-pages/-/gh-pages-1.2.0.tgz#1acb92801078f7c038a167f447221d1496ccfbee"
@@ -5822,13 +5818,12 @@ levn@^0.3.0, levn@~0.3.0:
     type-check "~0.3.2"
 
 liowebrtc@^0.2.4:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/liowebrtc/-/liowebrtc-0.2.5.tgz#7356e79438762bfdf6bca5b8ed1df0ae332ed3cd"
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/liowebrtc/-/liowebrtc-0.2.6.tgz#2f5fe10ea2c640450811cd7af29cda33df9091bf"
   dependencies:
     attachmediastream "^2.0.4"
     eslint-plugin-jest "^21.24.1"
     filetransfer "^2.0.4"
-    getscreenmedia "^5.0.0"
     hark "^1.2.0"
     mockconsole "0.0.1"
     rtcpeerconnection "^8.0.0"
@@ -6335,8 +6330,8 @@ mute-stream@0.0.7:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
 
 nan@^2.0.5:
-  version "2.11.1"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.1.tgz#90e22bccb8ca57ea4cd37cc83d3819b52eea6766"
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.12.1.tgz#7b1aa193e9aa86057e3c7bbd0ac448e770925552"
 
 nan@^2.9.2:
   version "2.11.0"
@@ -9314,7 +9309,7 @@ use@^3.1.0:
 
 utf-8-validate@1.2.x:
   version "1.2.2"
-  resolved "https://registry.yarnpkg.com/utf-8-validate/-/utf-8-validate-1.2.2.tgz#8bb871a4741e085c70487ca7acdbd7d6d36029eb"
+  resolved "http://registry.npmjs.org/utf-8-validate/-/utf-8-validate-1.2.2.tgz#8bb871a4741e085c70487ca7acdbd7d6d36029eb"
   dependencies:
     bindings "~1.2.1"
     nan "~2.4.0"

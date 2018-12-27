@@ -133,6 +133,7 @@ LioWebRTC.propTypes = {
   onReady: PropTypes.func, // Event listeners
   onJoinedRoom: PropTypes.func, // When we successfully join a room
   onReceivedPeerData: PropTypes.func, // When we receive a shout or whisper from a peer
+  onChannelOpen: PropTypes.func, // When a new data channel is established with a peer
   onConnectionReady: PropTypes.func, // When the signaling connection is ready
   onCreatedPeer: PropTypes.func, // When a new peer connects
   onPeerStreamAdded: PropTypes.func, // When a peer media stream is added

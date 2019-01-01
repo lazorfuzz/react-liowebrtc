@@ -685,7 +685,7 @@ async@2.6.1, async@^2.1.2, async@^2.1.4, async@^2.4.1, async@^2.5.0:
 
 async@^0.9.0:
   version "0.9.2"
-  resolved "http://registry.npmjs.org/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
+  resolved "https://registry.yarnpkg.com/async/-/async-0.9.2.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
 
 async@^1.5.2:
   version "1.5.2"
@@ -1825,7 +1825,7 @@ bcrypt-pbkdf@^1.0.0:
 
 benchmark@1.0.0:
   version "1.0.0"
-  resolved "http://registry.npmjs.org/benchmark/-/benchmark-1.0.0.tgz#2f1e2fa4c359f11122aa183082218e957e390c73"
+  resolved "https://registry.yarnpkg.com/benchmark/-/benchmark-1.0.0.tgz#2f1e2fa4c359f11122aa183082218e957e390c73"
 
 better-assert@~1.0.0:
   version "1.0.2"
@@ -1843,7 +1843,7 @@ binary-extensions@^1.0.0:
 
 bindings@1.2.x, bindings@~1.2.1:
   version "1.2.1"
-  resolved "http://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz#14ad6113812d2d37d72e67b4cacb4bb726505f11"
+  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.2.1.tgz#14ad6113812d2d37d72e67b4cacb4bb726505f11"
 
 bl@~0.8.1:
   version "0.8.2"
@@ -1853,7 +1853,7 @@ bl@~0.8.1:
 
 blob@0.0.4:
   version "0.0.4"
-  resolved "http://registry.npmjs.org/blob/-/blob-0.0.4.tgz#bcf13052ca54463f30f9fc7e95b9a47630a94921"
+  resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.4.tgz#bcf13052ca54463f30f9fc7e95b9a47630a94921"
 
 bluebird@^3.1.1, bluebird@^3.4.7, bluebird@^3.5.1:
   version "3.5.2"
@@ -2073,7 +2073,7 @@ buffer@^4.3.0:
 
 bufferutil@1.2.x:
   version "1.2.1"
-  resolved "http://registry.npmjs.org/bufferutil/-/bufferutil-1.2.1.tgz#37be5d36e1e06492221e68d474b1ac58e510cbd7"
+  resolved "https://registry.yarnpkg.com/bufferutil/-/bufferutil-1.2.1.tgz#37be5d36e1e06492221e68d474b1ac58e510cbd7"
   dependencies:
     bindings "1.2.x"
     nan "^2.0.5"
@@ -5813,9 +5813,9 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-liowebrtc@^0.2.4:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/liowebrtc/-/liowebrtc-0.2.8.tgz#3dc4f511398e9e288449353d7c5920e7f0ad6c25"
+liowebrtc@^0.2.12:
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/liowebrtc/-/liowebrtc-0.2.12.tgz#7509712bcb24ed4cfcfdf4d7c8c2d7aef886c89e"
   dependencies:
     attachmediastream "^2.0.4"
     filetransfer "^2.0.4"

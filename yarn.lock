@@ -6770,10 +6770,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-liowebrtc@0.2.12:
-  version "0.2.12"
-  resolved "https://registry.yarnpkg.com/liowebrtc/-/liowebrtc-0.2.12.tgz#7509712bcb24ed4cfcfdf4d7c8c2d7aef886c89e"
-  integrity sha512-tJ67zHIqbZfRQW/Q1afQTf4/flO3WC0BhNOmeAnUQbnuHf9HTnkfspvV2kMyyG9alCxLKeb7Km15EJ+kpcKdCQ==
+liowebrtc@0.2.16:
+  version "0.2.16"
+  resolved "https://registry.yarnpkg.com/liowebrtc/-/liowebrtc-0.2.16.tgz#4b966798dff65fd031d8759c36c9aedca2060815"
+  integrity sha512-OZQyUtuYTSfB/J/uGLb4dXlUzXCTV42MGYEiMTwG3NeJrB+2iLe4b1qYNW+JynqD5NYZGo8wJFQqteWk9B3UPQ==
   dependencies:
     attachmediastream "^2.0.4"
     filetransfer "^2.0.4"

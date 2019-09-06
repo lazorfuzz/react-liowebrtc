@@ -77,7 +77,6 @@ export default withWebRTC(MyComponent);
 ```jsx
 import React, { Component } from 'react';
 import { LioWebRTC, LocalVideo, RemoteVideo } from 'react-liowebrtc'
-import MyComponent from './MyComponent';
 
 class ExampleVideoChat extends Component {
 
@@ -99,9 +98,8 @@ class ExampleVideoChat extends Component {
   }
 
   generateRemotes = () => this.state.peers.map((peer) => (
-      <RemoteVideo key={`remote-video-${peer.id}`} peer={peer} />
-    );
-  });
+    <RemoteVideo key={`remote-video-${peer.id}`} peer={peer} />
+  ));
 
   render () {
     return (

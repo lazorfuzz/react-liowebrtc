@@ -95,11 +95,11 @@ class LioWebRTC extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         {
           <Context.Provider value={this.webrtc}>{this.props.children}</Context.Provider>
         }
-      </div>
+      </React.Fragment>
     );
   }
 }
